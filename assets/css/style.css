@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+::selection {
+    background: #F9A826;
+    color: #2F2E41;
+}
+
+html {
+    font-size: 68%;
+}
+
+.main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-text h1 {
+    font-family: 'Rampart One', cursive;
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.screen {
+    background-image: url(/img/bg.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.left-side form{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    padding: 90px;
+    background-color:rgba(0, 0, 0, 0.459);
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+input {
+    width: 37.5rem;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: .1rem solid #000;
+    border-radius: .8rem;
+    margin-bottom: 1.7rem;
+    background-color: #fff;
+}
+
+input::placeholder {
+    color: #F9A826;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.button {
+    width: 200px;
+    cursor: pointer;
+    background-color: #f9a826;
+    color: #FFF;
+    padding: 7px 10px;
+    font-weight: 600;   
+}
+
+.error {
+    background-color: #F9A826;
+    color: #2F2E41;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 59%;
+    }
+    .main-text h1 {
+        font-size: 3.5rem;
+    }
+    .screen {
+        background-size: cover;
+        background-position: right;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .left-side form {
+        padding:60px ;
+    }
+    .screen {
+        background-size: cover;
+        background-position: right;
+    }
+    .main-text h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    html {
+        font-size: 55%;
+    }
+    .left-side form {
+        padding: 30px;
+    }
+    .left-side input {
+        width: 100%;
+    }
+}
